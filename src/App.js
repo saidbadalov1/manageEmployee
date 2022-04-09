@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import EmployeeList from './components/EmployeeList';
+import EmployeeContextProvider from './components/contexts/EmployeeContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+
+      <div className="container-xxl">
+        <div className="table-responsive">
+          <div className="table-wrapper">
+            <EmployeeContextProvider>
+              <EmployeeList />
+            </EmployeeContextProvider>
+            
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
